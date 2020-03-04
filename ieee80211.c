@@ -3771,11 +3771,6 @@ ieee80211_build_countryie(struct ieee80211com *ic)
 				*cur_chan = c->ic_ieee;
 				prevchan = c->ic_ieee;
 				ic->ic_country_ie.country_len += 3;
-			} else if (*cur_pow == TXPOWER_PERCHAN_TO_NTX4_TOTAL(
-						ieee80211_chan_get_maxpwr(c, PWR_IDX_20M)) &&
-			    c->ic_ieee == prevchan + 1) {
-				(*cur_runlen)++;
-				prevchan = c->ic_ieee;
 			} else {
 				cur_runlen +=3;
 				cur_chan += 3;
