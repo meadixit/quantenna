@@ -847,6 +847,10 @@ ieee80211_dump_neighbor_beacon_info(struct ieee80211com *ic)
 				ssid, i, ieee80211_bw2str(b_bw), b_sec_offset,
 				b_loweredge, b_upperedge, rssi,
 				ieee80211_bw2str(g_aci_params[aci].bw));
+
+			IEEE80211_CSDBG(CHAN_SEL_LOG_INFO, "%-32s %-7s %-9s %-9s %-9s"
+			" %-9s %-4s %-8s\n", "Beacon", "Channel", "Bandwidth",
+			"Sec20_off", "CCI_edge-", "CCI_edge+", "RSSI", "ACI_span");
 		}
 	}
 }
