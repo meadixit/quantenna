@@ -74,7 +74,9 @@ static const struct ieee80211_cipher tkip  = {
 	.ic_enmic	= tkip_enmic,
 	.ic_demic	= tkip_demic,
 };
-
+/*
+	adding comments for git testting
+*/
 struct tkip_ctx {
 	struct ieee80211vap *tc_vap;	/* for diagnostics + statistics */
 	struct ieee80211com *tc_ic;
