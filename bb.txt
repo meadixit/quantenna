@@ -1,0 +1,1 @@
+awk '/QDRV_BLD_NAME/ {print $3}' log | awk '{gsub("\"","",$1); print "LABEL_NAME="$1 }' > name.txt
